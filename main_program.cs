@@ -1,7 +1,12 @@
-﻿
-Console.Write("Введите сколько элементов вы хотите внести в массив: ");
-try{
+﻿try{
+    Console.Write("Введите сколько элементов вы хотите внести в массив: ");
+
     int size = int.Parse(Console.ReadLine()!);
+
+    Console.WriteLine("Введите сколько символов в строке должно быть,дабы отсортировать ее: ");
+
+    int quantity = int.Parse(Console.ReadLine()!);
+
     string[] InputStringArr(int size)
     {
         string element = "";
@@ -28,7 +33,7 @@ try{
     }
 
 
-    string[] SortString(string[] RandomStringArr)
+    string[] SortString(string[] RandomStringArr,int quantity)
     {
         string convertor = "";
         string[] SortString = new string[RandomStringArr.Length];
@@ -36,7 +41,7 @@ try{
         for(int i = 0;i < RandomStringArr.Length;i++)
         {
             convertor = RandomStringArr[i];
-            if(convertor.Length <= 3)
+            if(convertor.Length <= quantity)
             {
                 SortString[index] = convertor;
                 index++;
@@ -48,7 +53,7 @@ try{
 
     string[] RandomStringArr = InputStringArr(size);
     PrintFunction(RandomStringArr);
-    string[] SortStringArr = SortString(RandomStringArr);
+    string[] SortStringArr = SortString(RandomStringArr,quantity);
     PrintFunction(SortStringArr);
 }
 catch{
