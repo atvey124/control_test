@@ -1,11 +1,10 @@
 ﻿try{
     Console.Write("Введите сколько элементов вы хотите внести в массив: ");
-
     int size = int.Parse(Console.ReadLine()!);
 
     Console.WriteLine("Введите сколько символов в строке должно быть,дабы отсортировать ее(включая само число): ");
-
     int quantity = int.Parse(Console.ReadLine()!);
+
 
     string[] InputStringArr(int size)
     {
@@ -13,7 +12,6 @@
         string[] RandomStringArr = new string[size];
         for(int i = 0;i < size;i++)
         {
-
             Console.WriteLine($"Введите элемент массива {i + 1}: ");
             element = Console.ReadLine()!;
             RandomStringArr[i] = element;
@@ -73,6 +71,7 @@
 
     string[] RandomStringArr = InputStringArr(size);
     PrintFunction(RandomStringArr);
+
     string[] SortStringArr = SortString(RandomStringArr,quantity);
     PrintFunction(SortStringArr);
 }
