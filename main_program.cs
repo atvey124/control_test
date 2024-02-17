@@ -13,28 +13,17 @@ string[] InputStringArr(int size)
         RandomStringArr[i] = element;
 
     }
-    Console.WriteLine(string.Join(", ",RandomStringArr));
     return RandomStringArr;
 }
 
-string[] SortString(string[] RandomStringArr)
+void PrintFunction(string[] arr)
 {
-    string convertor = "";
-    string[] SortString = new string[RandomStringArr.Length];
-    int index = 0;
-    for(int i = 0;i < RandomStringArr.Length;i++)
+    for(int i = 0;i < arr.Length;i++)
     {
-        convertor = RandomStringArr[i];
-        if(convertor.Length <= 3)
-        {
-            SortString[index] = convertor;
-            index++;
-        }
+        Console.Write(arr[i]);
     }
-    Console.WriteLine(string.Join(", ",SortString));
-    return SortString;
+    Console.WriteLine();
 }
-
 
 
 
